@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+    <!-- Responsive Design ke liye viewport set karna -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Form</title>
+    
+    <!-- Font Awesome Icons ke liye CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+               /* Set the font for the entire page and center align text */
+               body {
+            font-family: Arial, Helvetica, sans-serif; /* Set font style */
+            text-align: center; /* Center align text */
+            padding: 5px; /* Add padding around the body */
+        }
+
+        /* Header styling */
+        .header {
+            display: flex; /* Arrange elements in a row */
+            justify-content: space-between; /* Space out items evenly */
+            align-items: center; /* Align items in the center */
+            padding: 15px 60px; /* Add padding inside the header */
+            border-bottom: 4px solid #eee; /* Add a bottom border */
+        }
+
+        /* Navigation menu container */
+        .nav-links {
+            display: flex; /* Arrange links in a row */
+            align-items: center; /* Align items vertically */
+            list-style: none; /* Remove default bullet points */
+        }
+
+        /* Styling for each navigation list item */
+        .nav-links li {
+            margin: 0 15px; /* Add space between links */
+            font-size: 16px; /* Set font size */
+            font-weight: bold; /* Make text bold */
+        }
+
+        /* Styling for navigation links */
+        .nav-links a {
+            color: black; /* Set text color to black */
+            text-decoration: none; /* Remove underline */
+            transition: 0.3s; /* Smooth transition effect */
+        }
+
+        /* Change text color on hover */
+        .nav-links a:hover {
+            color: rgb(141, 36, 211); /* Change color on hover */
+        }
+
+        /* Highlighted text styling */
+        .highlight {
+            color: #FF0099 !important; /* Set text color to pink */
+            font-weight: bold; /* Make text bold */
+        }
+
+        /* Button styling for "PRO SITE" */
+        .pro-site {
+            background-color: #FF0099; /* Set background to pink */
+            color: white; /* Set text color to white */
+            padding: 10px 20px; /* Add padding inside button */
+            border-radius: 20px; /* Round button edges */
+            font-weight: bold; /* Make text bold */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Change button color when hovered */
+        .pro-site:hover {
+            background-color: #E60085; /* Darker pink on hover */
+        }
+
+        /* Layout for main content */
+        main {
+            display: flex; /* Arrange content side by side */
+            justify-content: space-between; /* Space out sections */
+            align-items: flex-start; /* Align items at the top */
+            max-width: 90%; /* Set max width */
+            margin: auto; /* Center the content */
+        }
+
+        /* Label styling */
+        label {
+            width: 30px; /* Set label width */
+            text-align: center; /* Center align text */
+            margin-right: 10px; /* Add spacing between label and input */
+            font-weight: lighter; /* Make font light */
+        }
+
+        /* Information section styling */
+        .info-section {
+            text-align: left; /* Align text to the left */
+            width: 45%; /* Set section width */
+        }
+
+        /* Form container */
+        .form-section form {
+            display: flex; /* Arrange items in rows */
+            flex-wrap: wrap; /* Allow wrapping of items */
+            justify-content: space-between; /* Space out form elements */
+            max-width: 800px; /* Set max width */
+            text-align: right; /* Align text to the right */
+            padding-top: 70px; /* Add space at the top */
+        }
+
+        /* Styling for input fields and select boxes */
+        input, select {
+            width: 100%; /* Make fields full width */
+            height: 40px; /* Set field height */
+            border-radius: 8px; /* Round the corners */
+            border: 1px solid #ccc; /* Light gray border */
+            padding: 12px; /* Add padding inside input */
+            font-size: 16px; /* Set font size */
+            margin-bottom: 15px; /* Add space below inputs */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        }
+
+        /* Set width for First Name and Last Name fields */
+        input[name="FirstName"], input[name="LastName"] {
+            width: 48%; /* Set width to fit in one row */
+        }
+
+        /* Name fields container */
+        .name-fields {
+            width: 100%; /* Full width */
+            display: flex; /* Arrange fields side by side */
+            justify-content: space-between; /* Space out fields */
+            gap: 10px; /* Add gap between fields */
+        }
+
+        /* Adjust input fields inside name-fields */
+        .name-fields input {
+            width: 50%; /* Make each field take half width */
+        }
+
+        /* Change placeholder text color */
+        input::placeholder {
+            color: rgb(20, 9, 9); /* Dark placeholder text */
+        }
+
+        /* Styling for contact information links */
+        .link1 a {
+            display: flex; /* Arrange icon and text in a row */
+            align-items: center; /* Align vertically */
+            gap: 10px; /* Add space between icon and text */
+            color: black; /* Set text color */
+        }
+
+        /* Button container */
+        .button1 {
+            width: 100%; /* Full width */
+            display: flex; /* Arrange buttons in a column */
+            flex-direction: column; /* Stack buttons vertically */
+            margin-top: 40px; /* Add space above buttons */
+        }
+
+        /* Button styling */
+        .button1 button {
+            width: 100%; /* Full width button */
+            padding: 15px; /* Add padding inside button */
+            background-color: black; /* Set background color */
+            color: white; /* Set text color */
+        }
+
+        /* Change textarea placeholder text color */
+        textarea::placeholder {
+            color: rgb(20, 9, 9); /* Dark text */
+        }
+
+        /* Styling for textarea */
+        textarea {
+            font-size: 16px; /* Set font size */
+            border-radius: 8px; /* Round the corners */
+            border: 1px solid #ccc; /* Light gray border */
+            padding: 12px; /* Add padding inside */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="highlight">SEE HOW IT WORK *</a></li>
+                <li><a href="#">SHOP NOW </a></li>
+                <li><a href="#">LEARN MORE</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="pro-site">PRO SITE</a>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+
+        <!-- Information Section -->
+        <section class="info-section">
+            <div>
+                <h1 style="font-size: 70px;"><b>have a <br>question?</b></h1> 
+                <p>
+                    We’re here to help! Fill out the form or reach us via email or phone.
+                </p>
+            </div>
+            <br>
+
+            <!-- Contact Information -->
+            <div class="link1">
+                <a href="mailto:nandkishorpal@gmail.com"><i class="fa-solid fa-envelope"></i> nandkishorpal@gmail.com</a><br>
+                <a href="tel:1302220800"><i class="fa-solid fa-phone"></i> 130-222-0800</a><br>
+                <a href="chat.com"><i class="fa-solid fa-comments"></i> Chat with us</a>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <form action="">
+                <div class="name-fields">
+                    <input type="text" id="lname" required name="FirstName" placeholder="*Last Name">
+                    <input type="text" id="lname" name="LastName" required placeholder="*First Name">
+                </div>
+                <input type="email" id="email" placeholder="*Email" name="email" required><br>
+                <input type="text" name="mobile" id="mobile" placeholder="Phone Number (Optional)"><br>
+
+                <input list="states" name="state" id="state" placeholder="*Select Your State">
+                <datalist id="states">
+                    <option value="MP">MP</option>
+                    <option value="UP">UP</option>
+                    <option value="Assam">Assam</option>
+                </datalist>
+                <br>
+
+                <input type="text" name="" id="pincode" placeholder="*Pincode"><br>
+
+                <select name="country" id="country">
+                    <option value="india">india</option>
+                    <option value="america">america</option>
+                    <option value="london">london</option>
+                    <option value="canada">canada</option>
+                    <option value="africa">africa</option>
+                </select>
+                <br>
+
+                <textarea name="message" id="message" rows="8" cols="100" placeholder="*Message"></textarea> 
+                <br>                 
+
+                <div class="button1">
+                    <button type="submit">Submit</button><br>
+                    <button type="reset">Reset</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>

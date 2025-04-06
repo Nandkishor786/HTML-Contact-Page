@@ -1,0 +1,41 @@
+body{
+
+background-color: #080707;
+font-family:Arial, Helvetica, sans-serif;
+text-align: left;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+header{
+    background-color: #090208;
+     text-align: center;
+     color: #e3f2faa3;
+     padding: 10px;
+     font-size: 24px;
+     margin-bottom: auto;
+     margin-top: auto;
+}
+nav a{
+    padding: 10px;
+    color: #560fe5;
+    font-style: oblique;
+    font-size: 18px;
+}
+nav{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+main{
+    padding: 10px;
+    
+}
+section{
+    background:hsl(210, 6%, 6%);
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 20px;
+    box-shadow: #560fe5;
+}

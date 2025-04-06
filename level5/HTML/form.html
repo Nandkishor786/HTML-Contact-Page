@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form creation</title>
+</head>
+<body>
+
+    <form action="formdata.html">
+
+         <label for="username">Username</label>
+        <input 
+        id="username"
+        type="text"
+        placeholder="enter your username">
+        <br>
+        <label for="P_assword">Password</label>
+        <input 
+        id="P_assword"
+        type="password"
+        placeholder="enter your password">
+        <br>
+        <label for="date">Date</label>
+        <input
+        id="date" 
+        type="date">
+        <br>
+        <label for="file">Choose file</label>
+        <input 
+        type="file"
+        id="file">
+        <br>
+        <label for="color">Pick Color</label>
+        <input 
+        id="color"
+        type="color">
+        <br>
+        <label for="range">Range of Budget</label>
+        <input 
+        name="range"
+        id="range"
+        type="range"
+        min="0" max="100" step="10" value="20">
+        <br>
+        <label for="custombutton">PickName:</label>
+        <input
+         type="button" 
+         id="custombutton"
+         value="Goto"
+         onclick="location.href ='name.html'">
+         <br>
+
+         <label for="Gender">Gender:</label><br>
+         <label for="male">Male</label>
+         <input type="radio" id="gender" name="gender" value="Male">
+         <label for="female">Female</label>
+         <input type="radio" id="female" name="gender" value="Female">
+          <label for="other">Other</label>
+         <input type="radio" name="gender" id="other" value="Other">
+         <br>
+         <label for="Country">Couses</label>
+         <br>
+         <label for="india">mern stack</label>
+         <input type="checkbox" name="country" id="india" value="india"><br>
+         <label for="america">AI</label>
+         <input type="checkbox" name="country" id="america" value="america">
+         <br>
+         <label for="country">Select your country</label>
+         <select name="country" id="country">
+            <option value="india">india</option>
+            <option value="america">america</option>
+         </select>
+         <br>
+         <label for="story">Story:</label><br>
+         <textarea placeholder="please write a story"
+          name="story" id="story" rows="5" cols="50"></textarea>
+        <br>
+        <label for="iframe">iframe tag:</label><br>
+        <label for="mycourse">HTML by Prashant Sir:</label><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rklidcZ-aLU?si=pU5tPRFyoDU7h9uD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+        
+        <label for="w3school">cr7</label><br>
+        <iframe src="https://en.wikipedia.org/wiki/Cristiano_Ronaldo"  width="1000" height="700"></iframe>
+        
+        <br>
+        <button type="submit">Submit</button>
+
+     
+
+    </form>
+    
+</body>
+</html>
